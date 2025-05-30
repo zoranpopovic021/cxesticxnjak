@@ -151,7 +151,7 @@ def test(data, exp):
     return stat, p_val
 
 def play(p_audio):
-       global play_obj
+       global play_obj, t_audio
        t = np.arange(0,bufflen/sample_rate,1/sample_rate)
        t_audio = np.array([])
        for n in range(len(p_audio)):
@@ -299,10 +299,10 @@ def on_click(event):
 
 def loop():
   reset()
-  global G, play_obj, audio, l_audio, size, l, t, t2, fig, ax, axamp, axamp2, axamp3, samp, samp2, samp3, is_manual, scale, ani, area, vel, phi, colors, x, y, max_vel, a_max, a_min, min_vel, N, clix, samp4, samp5, samp6, c_rate, c_M
+  global G, play_obj, audio, l_audio, size, l, t, t2, fig, ax, axamp, axamp2, axamp3, samp, samp2, samp3, is_manual, scale, ani, area, vel, phi, colors, x, y, max_vel, a_max, a_min, min_vel, N, clix, samp4, samp5, samp6, c_rate, c_M, t_audio
   fig, ax = plt.subplots()
   audio = [0]*(bufflen*repeat)
-  audio = np.array(audio).astype(np.int16)
+  t_audio=audio = np.array(audio).astype(np.int16)
   l_audio = []
   play_obj = sa.play_buffer(audio, 1, 2, sample_rate)
   if len(size)>0:
