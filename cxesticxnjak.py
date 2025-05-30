@@ -14,7 +14,7 @@ TWOPI = 2*np.pi
 bufflen = 1403
 repeat = 10
 A_freq = 110
-G = -0.1
+G = 0
 a = 400
 b = 400
 N = 150
@@ -348,5 +348,6 @@ def main_loop():
     if len(size)==0:
        px = 1/plt.rcParams['figure.dpi'] 
        size = fig.get_size_inches()/px
+
 if __name__ == '__main__':
    main_loop()
