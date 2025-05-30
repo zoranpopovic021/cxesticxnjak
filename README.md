@@ -9,4 +9,5 @@ Python 3.11+ also needed. Start the application with:
 
 python3 -m cxesticxnjak
 
+Parameter G=0 if no (anti)gravity is needed, other parameters will be additionally documented if needed later.
 Have fun!
